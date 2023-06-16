@@ -6,9 +6,10 @@
  */
 int main(void)
 {
-	int i;
+	char alphabet;
 
-	for (i = 0; i <= 10; i++)
-		write(1, &"0123456789\n"[i], 1);
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+		write(1, &alphabet, 1);
+	write(1, "\n", 1);
 	return (0);
 }
