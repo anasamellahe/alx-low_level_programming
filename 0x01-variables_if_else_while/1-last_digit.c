@@ -19,7 +19,7 @@ int main(void)
 	else
 	{
 		((n % 10) == 0) ? printf("Last digit of %d is 0 and is 0\n", n) :
-			printf("Last digit of %d is %d and is great than 5\n", n, (n % 10));
+			printf("Last digit of %d is %d and is greater than 5\n", n, (n % 10));
 	}
 	/* your code goes there */
 	return (0);
