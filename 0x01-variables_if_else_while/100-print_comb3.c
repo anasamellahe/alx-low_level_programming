@@ -7,24 +7,20 @@
  */
 int main(void)
 {
-	int a, b, c;
+	int a, b;
 
-	for (a = '0'; a <= '7'; a++)
+	for (a = '0'; a <= '8'; a++)
 	{
 		b = a + 1;
-		for (; b <= '8'; b++)
+		for (; b <= '9'; b++)
 		{
-			c = b + 1;
-			for (; c <= '9'; c++)
+			putchar(a);
+			putchar(b);
+			putchar(c);
+			if (a != '8')
 			{
-				putchar(a);
-				putchar(b);
-				putchar(c);
-				if (a != '7')
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
