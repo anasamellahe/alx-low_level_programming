@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 /**
  * main - starting point
  *
@@ -6,9 +6,13 @@
  */
 int main(void)
 {
-	char *string  = "_putchar";
+	char *str  = "_putchar";
 
-	for (int i = 0; string[i]; i++)
-		_putchar(string[i];
+	int i;
+
+	i = 0;
+	while (str[i])
+		_putchar(str[i++]);
+	_putchar('\n');
 	return (0);
 }
