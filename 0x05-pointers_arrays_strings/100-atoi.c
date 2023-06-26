@@ -36,19 +36,19 @@ int _atoi(char *s)
 	i = 0;
 	sign = 1;
 	number = 0;
-	while (ft_isspace((int)str[i]))
+	while (ft_isspace((int)s[i]))
 	{
 		i++;
 	}
-	while (str[i] == '-' || str[i] == '+')
+	while (s[i] == '-' || s[i] == '+')
 	{
-		if (str[i] == '-')
+		if (s[i] == '-')
 			sign *= -1;
 		i++;
 	}
-	while (ft_isnumber((int)str[i]))
+	while (ft_isnumber((int)s[i]))
 	{
-		number = number * 10 + (str[i] - 48);
+		number = number * 10 + (s[i] - 48);
 		i++;
 	}
 	return (number * sign);
