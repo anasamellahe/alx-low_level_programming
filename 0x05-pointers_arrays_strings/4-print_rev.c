@@ -15,7 +15,7 @@ int _strlen(char *s)
 }
 /**
  * print_rev - print a string in revers
- * @s -  the string pointedto by 's'
+ * @s:  the string pointedto by 's'
  */
 void print_rev(char *s)
 {
