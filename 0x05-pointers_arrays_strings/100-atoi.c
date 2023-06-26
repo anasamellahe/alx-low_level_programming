@@ -36,11 +36,7 @@ int _atoi(char *s)
 	i = 0;
 	sign = 1;
 	number = 0;
-	while (ft_isspace((int)s[i]))
-	{
-		i++;
-	}
-	while (s[i] == '-' || s[i] == '+')
+	while (!ft_isnumber((int)s[i]))
 	{
 		if (s[i] == '-')
 			sign *= -1;
