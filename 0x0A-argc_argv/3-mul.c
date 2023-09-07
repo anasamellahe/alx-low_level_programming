@@ -11,7 +11,7 @@
 
 int main(int ac, char *av[])
 {
-	if (ac > 1 && ac < 4)
+	if (ac == 3)
 	{
 		printf("%d\n", atoi(av[1]) * atoi(av[2]));
 	}
