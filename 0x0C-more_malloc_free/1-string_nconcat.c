@@ -53,6 +53,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int len;
 	char *p;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	len = _strlen(s1) + n;
 	p = (char *)malloc(len + 1);
 	if (p == NULL)
