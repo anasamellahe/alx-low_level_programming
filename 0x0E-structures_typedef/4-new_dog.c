@@ -22,10 +22,8 @@ int _strlen(char *s)
  *
  * @src: pointer that has the string information
  * @dest: pointer to be copied
- *
- * Return: string copied to dest
  */
-char *_strcpy(char *dest, char *src)
+void _strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -36,7 +34,6 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	return (dest);
 }
 
 /**
@@ -52,20 +49,19 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
-	char *new_name, *new_owner;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
 	new_dog = (dog_t *)malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 		return (NULL);
-	new_name = (char *)malloc(_strlen(name) + 1);
-	new_owner = (char *)malloc(_strlen(owner) + 1);
-	if (new_owner == NULL || new_name == NULL)
+	new_dog->name = (char *)malloc((_strlen(name) + 1) * sizeof(char));
+	new_dog->owner = (char *)malloc((_strlen(owner) + 1) * sizeof(char));
+	if (new_dog->owner == NULL || new_dog->name == NULL)
 		return (NULL);
-	new_dog->name = _strcpy(new_name, name);
+	_strcpy(new_dog->name, name);
 	new_dog->age = age;
-	new_dog->owner = _strcpy(new_owner, owner);
+	_strcpy(new_dog->owner, owner);
 	return (new_dog);
 }
 
