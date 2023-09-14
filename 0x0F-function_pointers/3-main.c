@@ -22,7 +22,7 @@ int main(int ac, char *av[])
 	if (ac == 4)
 	{
 		if ((av[2][0] ==  '/' || av[2][0] == '%') &&
-				(av[1][0] == '0' || av[3][0] == '0'))
+				av[3][0] == '0')
 		{
 			printf("Error\n");
 			exit(100);
